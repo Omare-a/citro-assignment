@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+html, body {
+  color: #191919;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+header {
+  background-color: #F0EFE9;
+  padding: 16px;
+}
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header .container .meny-bars {
+  border: none;
+  font-size: 25px;
+  background-color: transparent;
+}
+@media (min-width: 992px) {
+  header .container .meny-bars {
+    display: none;
+  }
+}
+header .container .meny {
+  display: none;
+  flex: 1;
+  margin-left: 68px;
+}
+@media (min-width: 992px) {
+  header .container .meny {
+    display: block;
+  }
+}
+header .container .meny .top-meny {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  padding-left: 1px;
+  border-bottom: 1px solid #DAD9D3;
+}
+header .container .meny .top-meny .contact-info {
+  display: flex;
+  list-style-type: none;
+}
+header .container .meny .top-meny .contact-info li {
+  padding-right: 20px;
+  margin-right: 27px;
+  border-right: 1px solid #DAD9D3;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  opacity: 1;
+}
+header .container .meny .top-meny .contact-info li i {
+  margin-right: 3px;
+  font-size: 1.09em;
+  opacity: 1.2;
+}
+header .container .meny .top-meny .contact-info li.last {
+  border: none;
+}
