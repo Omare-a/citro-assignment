@@ -44,13 +44,16 @@ header {
                 padding-bottom: 10px;
                 padding-left: 1px;
                 border-bottom: 1px solid #DAD9D3;
+                align-items: center;
                 
                 
                 .contact-info{
                     display: flex;
                     list-style-type: none;
+                    align-items: center;
                     
                     li{
+                        display: none;
                         padding-right: 20px;
                         margin-right: 27px;
                         border-right: 1px solid #DAD9D3;
@@ -58,6 +61,11 @@ header {
                         font-size: 14px;
                         font-weight: 300;
                         opacity: 1.00;
+
+                        @media(min-width:1200px){
+                            display: flex;
+                            
+                        }
 
                         i{
                             margin-right: 3px;
@@ -71,11 +79,81 @@ header {
 
                     }
                 }
+                .social-media {
+                    a{
+                        color: #191919;
+                        font-size: 1.1rem;
+                        margin-left: 9px;
+                        
+                        &:hover{
+                            color: #666666;
+                        }
+                    }
+                }
+            }   
+            .bottom-meny {
+                display: flex;
+                padding-left: 0px;
+                justify-content: space-between;
+                align-items: center;
 
+                div{
+                    a{
+                        display: inline-block;
+                        color: #191919;
+                        text-decoration: none;
+                        margin-right: 30px;
+                        position: relative;
+                        
+                        &.active::after{
+                            font-weight: 500;
+                        }
+
+                        &.active::after,
+                        &:hover::after{
+                            content:'';
+                            position: absolute;
+                            font-weight: 500;
+                            height: 2px;
+                            width: 15px;
+                            background-color: #191919;
+                            
+                            left: 50%;
+                            bottom: -3px;
+                            transform: translate(calc(50% - 15px));
+
+                        }
+                    }
+
+                }
+                button {
+                    background-color: #F9D783;
+                    border: #F9D783;
+                    padding: 11px 25px;
+                    border-radius: 40px;
+                    
+                    
+                    &:hover{
+                    background-color: #f3cc6b;
+                    }
+
+                    a{
+                        color: #191919;
+                        font-weight: 600;
+                        text-decoration: none;
+                        font-size: 16px;
+                        
+                        i{
+                            margin-left: 5px;
+                            font-size: 0.9em;
+
+                        }
+                    }   
+                    
+                }
             }
-       
             
-       
+        
         }
 
 

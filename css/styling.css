@@ -41,12 +41,15 @@ header .container .meny .top-meny {
   padding-bottom: 10px;
   padding-left: 1px;
   border-bottom: 1px solid #DAD9D3;
+  align-items: center;
 }
 header .container .meny .top-meny .contact-info {
   display: flex;
   list-style-type: none;
+  align-items: center;
 }
 header .container .meny .top-meny .contact-info li {
+  display: none;
   padding-right: 20px;
   margin-right: 27px;
   border-right: 1px solid #DAD9D3;
@@ -55,6 +58,11 @@ header .container .meny .top-meny .contact-info li {
   font-weight: 300;
   opacity: 1;
 }
+@media (min-width: 1200px) {
+  header .container .meny .top-meny .contact-info li {
+    display: flex;
+  }
+}
 header .container .meny .top-meny .contact-info li i {
   margin-right: 3px;
   font-size: 1.09em;
@@ -62,4 +70,58 @@ header .container .meny .top-meny .contact-info li i {
 }
 header .container .meny .top-meny .contact-info li.last {
   border: none;
+}
+header .container .meny .top-meny .social-media a {
+  color: #191919;
+  font-size: 1.1rem;
+  margin-left: 9px;
+}
+header .container .meny .top-meny .social-media a:hover {
+  color: #666666;
+}
+header .container .meny .bottom-meny {
+  display: flex;
+  padding-left: 0px;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .meny .bottom-meny div a {
+  display: inline-block;
+  color: #191919;
+  text-decoration: none;
+  margin-right: 30px;
+  position: relative;
+}
+header .container .meny .bottom-meny div a.active::after {
+  font-weight: 500;
+}
+header .container .meny .bottom-meny div a.active::after, header .container .meny .bottom-meny div a:hover::after {
+  content: "";
+  position: absolute;
+  font-weight: 500;
+  height: 2px;
+  width: 15px;
+  background-color: #191919;
+  left: 50%;
+  bottom: -3px;
+  transform: translate(calc(50% - 15px));
+}
+header .container .meny .bottom-meny button {
+  background-color: #F9D783;
+  border: #F9D783;
+  padding: 11px 25px;
+  border-radius: 40px;
+}
+header .container .meny .bottom-meny button:hover {
+  background-color: #f3cc6b;
+}
+header .container .meny .bottom-meny button a {
+  color: #191919;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 16px;
+}
+header .container .meny .bottom-meny button a i {
+  margin-left: 5px;
+  font-size: 0.9em;
 }
