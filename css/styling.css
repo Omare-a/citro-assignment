@@ -1,9 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap");
 html, body {
   color: #191919;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 400;
+}
+
+.btn-yellow {
+  background-color: #F9D783;
+  border: #F9D783;
+  padding: 11px 25px;
+  border-radius: 40px;
+  color: #191919;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+}
+.btn-yellow i {
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+.btn-yellow:hover {
+  background-color: #f3cc6b;
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 1px solid #191919;
+  padding: 11px 25px;
+  border-radius: 40px;
+  color: #191919;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+}
+.btn-transparent i {
+  margin-left: 5px;
+  font-size: 0.9em;
+}
+.btn-transparent:hover {
+  background-color: #e7e6e0;
 }
 
 header {
@@ -106,22 +143,93 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
   bottom: -3px;
   transform: translate(calc(50% - 15px));
 }
-header .container .meny .bottom-meny button {
-  background-color: #F9D783;
-  border: #F9D783;
-  padding: 11px 25px;
-  border-radius: 40px;
+
+.showcase {
+  background-color: #F0EFE9;
 }
-header .container .meny .bottom-meny button:hover {
-  background-color: #f3cc6b;
+.showcase .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-header .container .meny .bottom-meny button a {
-  color: #191919;
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 16px;
+.showcase .container .content {
+  padding-top: 30px;
+  padding-bottom: 50px;
+  text-align: center;
 }
-header .container .meny .bottom-meny button a i {
-  margin-left: 5px;
-  font-size: 0.9em;
+@media (min-width: 576px) {
+  .showcase .container .content {
+    padding-top: 60px;
+    padding-bottom: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .showcase .container .content {
+    text-align: left;
+  }
+}
+.showcase .container .content h1 {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+}
+@media (min-width: 576px) {
+  .showcase .container .content h1 {
+    font-size: 62px;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container .content h1 {
+    font-size: 70px;
+  }
+}
+@media (min-width: 1400px) {
+  .showcase .container .content h1 {
+    font-size: 86px;
+  }
+}
+.showcase .container .content p {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+@media (min-width: 576px) {
+  .showcase .container .content p {
+    font-size: 20px;
+  }
+}
+.showcase .container .content a {
+  margin-right: 10px;
+  padding: 15px;
+  font-weight: 500;
+  font-size: 15px;
+  display: block;
+  margin-bottom: 8px;
+}
+@media (min-width: 328px) {
+  .showcase .container .content a {
+    display: inline-block;
+  }
+}
+@media (min-width: 576px) {
+  .showcase .container .content a {
+    font-size: 17px;
+  }
+}
+.showcase .container img {
+  margin-right: -50px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .showcase .container img {
+    width: 450px;
+    display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .showcase .container img {
+    height: auto;
+    width: auto;
+    display: block;
+  }
 }

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,900&family=Inter:wght@300;400;500;700;900&display=swap');
 html,body{
     color: #191919;
     font-family: 'Inter', sans-serif;
@@ -8,8 +8,50 @@ html,body{
 
 
 }
+.btn-yellow{
+    background-color: #F9D783;
+    border: #F9D783;
+    padding: 11px 25px;
+    border-radius: 40px;
 
-header {
+    color: #191919;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 17px;
+    i{
+        margin-left: 5px;
+        font-size: 0.9em;
+
+    }    
+    
+    &:hover{
+    background-color: #f3cc6b;
+    }
+
+}
+.btn-transparent{
+    background-color: transparent;
+    border: 1px solid #191919;
+    padding: 11px 25px;
+    border-radius: 40px;
+
+    color: #191919;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 17px;
+    i{
+        margin-left: 5px;
+        font-size: 0.9em;
+
+    }    
+    
+    &:hover{
+    background-color: #e7e6e0;
+    }
+
+}
+
+header{
     background-color: #F0EFE9;
     padding: 16px;
     
@@ -126,38 +168,10 @@ header {
                     }
 
                 }
-                button {
-                    background-color: #F9D783;
-                    border: #F9D783;
-                    padding: 11px 25px;
-                    border-radius: 40px;
-                    
-                    
-                    &:hover{
-                    background-color: #f3cc6b;
-                    }
-
-                    a{
-                        color: #191919;
-                        font-weight: 600;
-                        text-decoration: none;
-                        font-size: 16px;
-                        
-                        i{
-                            margin-left: 5px;
-                            font-size: 0.9em;
-
-                        }
-                    }   
-                    
-                }
             }
             
-        
+       
         }
-
-
-
         
     }
 
@@ -165,4 +179,90 @@ header {
   
     
     
+}
+
+.showcase{
+    background-color: #F0EFE9;
+ 
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .content{
+            padding-top: 30px;
+            padding-bottom: 50px;
+            text-align: center;
+
+            @media(min-width: 576px){
+                padding-top: 60px;
+                padding-bottom: 70px;
+            }
+            
+            @media(min-width:992px){
+                text-align: left;
+            }
+
+            h1{
+                font-family:'DM Sans', sans-serif;
+                font-weight: 700;
+                font-size: 40px;
+               
+                @media(min-width: 576px){
+                    font-size: 62px;
+                }
+                @media(min-width: 1200px){
+                    font-size: 70px;
+                }
+                @media(min-width:1400px) {
+                    font-size: 86px;
+                    
+                }
+            }
+            p{
+                font-size: 15px;
+                padding-top: 10px;
+                padding-bottom: 40px;
+                
+                @media(min-width: 576px){
+                    font-size: 20px;
+                }
+
+            }
+            a{
+                margin-right: 10px;
+                padding: 15px;
+                font-weight: 500;
+                font-size: 15px;
+                display: block;
+                margin-bottom: 8px;
+
+                @media(min-width: 328px){
+                    display: inline-block;
+                }
+                
+                @media(min-width: 576px){
+                    font-size: 17px;
+                }
+
+            }
+            
+        }
+        img{
+            margin-right: -50px;
+            display: none;
+
+            @media(min-width: 992px){
+                width: 450px;
+                display: block;
+            }
+
+            @media(min-width: 1200px){
+                height: auto;
+                width: auto;
+                display: block;
+            }
+        }
+
+    }
 }
