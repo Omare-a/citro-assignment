@@ -10,65 +10,159 @@
 </head>
 <body>
 
-   <!-- header section; meny, social, contact -->
-   <header>
-      <div class="container">
-         <img src="images/logo.svg" alt="citro logo">
-         <button class="meny-bars"><i class="fa-solid fa-bars"></i></button>
-         <nav class="meny">
-            <ul class="top-meny">
-               <div class="contact-info">
-                  <li>
-                     <i class="fa-regular fa-phone-volume"></i>
-                     +46 (8) 121 470 50
-                  </li>
-                  <li>
-                     <i class="fa-regular fa-envelope"></i>
-                     info@citro.com
-                  </li>
-                  <li class="last">
-                     <i class="fa-regular fa-location-dot"></i>
-                     Sveavägen 31, 111 34 STOCKHOLM
-                  </li>
+   <div class="wrapper-grid">
+      <!-- header section; meny, social, contact -->
+      <header>
+         <div class="container">
+            <img src="images/logo.svg" alt="citro logo">
+            <button class="meny-bars"><i class="fa-solid fa-bars"></i></button>
+            <nav class="meny">
+               <ul class="top-meny">
+                  <div class="contact-info">
+                     <li>
+                        <i class="fa-regular fa-phone-volume"></i>
+                        +46 (8) 121 470 50
+                     </li>
+                     <li>
+                        <i class="fa-regular fa-envelope"></i>
+                        info@citro.com
+                     </li>
+                     <li class="last">
+                        <i class="fa-regular fa-location-dot"></i>
+                        Sveavägen 31, 111 34 STOCKHOLM
+                     </li>
+                  </div>
+                  <div class="social-media">
+                     <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                     <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+                     <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                     <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                  </div>
+               </ul>
+               <ul class="bottom-meny">
+                  <div>
+                     <a href="#" class="active">Home</a>
+                     <a href="#">Service</a>
+                     <a href="#">News</a>
+                     <a href="#">Contact</a>
+                  </div>
+                  <a href="login.html" class="btn-yellow">Login <i class="fa-regular fa-arrow-up-right"></i></a>
+               </ul>
+            </nav>
+         </div>   
+      </header>
+      
+      <!-- welcome to the main content -->
+      <main>
+         
+         <!-- showcase section -->
+         <section class="showcase">
+            <img class="background-lines" src="images/background-lines.svg" alt="background-lines" >
+            <div class="container">
+               <div class="content">
+                  <h1>We Provide The Best Business Solutions</h1>
+                  <p>Establish your vision and value proposition and turn them into testable prototypes.</p>
+                  <a href="Consulting.html" class="btn-yellow">Get Consulting<i class="fa-regular fa-arrow-up-right"></i></a>
+                  <a href="Services.html" class="btn-transparent">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
+   
                </div>
-               <div class="social-media">
-                  <a href="#" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="#" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
-                  <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="#" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-               </div>
-            </ul>
-            <ul class="bottom-meny">
-               <div>
-                  <a href="#" class="active">Home</a>
-                  <a href="#">Service</a>
-                  <a href="#">News</a>
-                  <a href="#">Contact</a>
-               </div>
-               <a href="login.html" class="btn-yellow">Login <i class="fa-regular fa-arrow-up-right"></i></a>
-            </ul>
-         </nav>
-      </div>   
-   </header>
-
-   <!-- showcase section -->
-   <section class="showcase">
-      <div class="container">
-         <div class="content">
-            <h1>We Provide The Best Business Solutions</h1>
-            <p>Establish your vision and value proposition and turn them into testable prototypes.</p>
-            <a href="Consulting.html" class="btn-yellow">Get Consulting<i class="fa-regular fa-arrow-up-right"></i></a>
-            <a href="Services.html" class="btn-transparent">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
-
+               <img src="images/showcase-image.svg" alt="image of a man in a suit with a tablet">
+   
+            </div>
+   
+         </section>
+   
+         <!-- commercials -->
+         <div class="container-fluid commercial">
+            <img src="images/paperz.svg" alt="paperz">
+            <img src="images/dorfus.svg" alt="dorfus">
+            <img src="images/martino.svg" alt="martino">
+            <img src="images/square.svg" alt="square">
+            <img src="images/gobona.svg" alt="gobona">
          </div>
-         <img src="images/showcase-image.svg" alt="image of a man in a suit with a tablet">
+   
+         <!-- feature section -->
+         <!-- ej klar -->
+         <section class="container features">
+            
+            <div class="section-title">
+               <p>Features</p>
+               <h2>Our Accounting is trusted by thousand of companies</h2>
+               <a href="login.html" class="btn-yellow">Learn More<i class="fa-regular fa-arrow-up-right"></i></a>
+            </div>
+            
+            <div class="parent">
+               <div class="box">
+                  <i class="fa-regular fa-handshake"></i>
+                  <h3>Business Advice</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>                  
+               </div>
+               <div class="box">
+                  <i class="fa-solid fa-lightbulb-exclamation-on"></i>
+                  <h3>Startup Business</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+               </div>
+               <div class="box">
+                  <i class="fa-sharp fa-solid fa-chart-mixed-up-circle-dollar"></i>
+                  <h3>Financial Advice</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+               </div>
+               <div class="box">
+                  <i class="fa-light fa-box-check"></i>
+                  <h3>Risk Management</h3>
+                  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+               </div>
+            </div>
+         </section>
+   
 
-      </div>
 
-   </section>
+         <!-- project & case studies section -->
+         <section class="project-and-case">
+            <div class="container">
+               <div class="section-title">
+                  <p>Project & Case Studies</p>
+                  <h2>Let’s Looks Our Global Projects</h2>
+               </div>
+               <div class="project-and-cases">
+                  <a href="#" class="project">
+                     <img src="images/man-holding-a-newspaper.jpg" alt="man holding a newspaper">
+                     <h3>Grow your business</h3>
+                     <article class="readmore">Read More<i class="fa-regular fa-arrow-up-right"></i></article>
+                  </a>
+                  <a href="#" class="project">
+                     <img src="images/laptop-on-a-table.jpg" alt="pink ipad on a table">
+                     <h3>Why your client needs a responsive website</h3>
+                     <article class="readmore">Read More<i class="fa-regular fa-arrow-up-right"></i></article>
+                  </a>
+                  <a href="#" class="project">
+                     <img src="images/pen-and-notebook.jpg" alt="desk with office supplies">
+                     <h3>Educate your employees to get better results</h3>
+                     <article class="readmore">Read More<i class="fa-regular fa-arrow-up-right"></i></article>
+                  </a>
+                  <a href="#" class="project">
+                     <img src="images/laptop-on-table.jpg" alt="laptop with business intelligence Insights">
+                     <h3>Business Insights is a important piece of your business</h3>
+                     <article class="readmore">Read More<i class="fa-regular fa-arrow-up-right"></i></article>
+                  </a>
+               </div>
+               <div class="center-content">
+               <a href="projects.html"><button class="btn-black">All Recent Projects<i class="fa-regular fa-arrow-up-right"></i></button></a>
+               </div>
 
-   <!-- change it later!!! -->
-   <!-- <div style="height: 2000px;"></div> -->
+               
+            </div>
+   
+         </section>
+         
+      </main>
+     
+   
+   
+   
+      <!-- change it later!!! -->
+      <div style="height: 2000px;"></div>
+   </div>
 
 
 
