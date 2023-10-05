@@ -6,13 +6,18 @@ html, body {
   font-size: 16px;
   font-weight: 400;
   overflow-x: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .wrapper-grid {
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-auto-rows: auto 1fr auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .btn-yellow {
@@ -309,10 +314,10 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 .commercial {
   display: flex;
   justify-content: center;
-  height: 8%;
+  height: 4%;
   align-items: center;
 }
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .commercial {
     height: auto;
   }
@@ -655,24 +660,48 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 }
 
 .why-choose-us {
-  border: solid;
+  z-index: 0;
+}
+.why-choose-us .blank {
+  background-color: #F0EFE9;
+  width: 1057px;
+  max-width: 100%;
+  height: 425px;
+  position: relative;
+  z-index: -1;
+  bottom: 800px;
+  left: 39%;
+  display: none;
+}
+@media (min-width: 1200px) {
+  .why-choose-us .blank {
+    bottom: 525px;
+    left: 43%;
+  }
+}
+@media (min-width: 992px) {
+  .why-choose-us .blank {
+    display: flex;
+  }
 }
 .why-choose-us .container {
   display: flex;
   column-gap: 80px;
-  align-items: center;
+  align-items: center top;
 }
 .why-choose-us .container .section-title {
   display: block;
   padding-top: 60px;
 }
-.why-choose-us .container .section-title .main-content {
-  padding-top: 10px;
-}
 .why-choose-us .container .section-title li {
   list-style-type: none;
   padding: 0px;
   margin-top: 40px;
+}
+@media (max-width: 992px) {
+  .why-choose-us .container .section-title li {
+    font-size: 0.9em;
+  }
 }
 .why-choose-us .container .section-title li a {
   text-decoration: none;
@@ -685,7 +714,7 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 .why-choose-us .container .section-title li a i {
   grid-column: 1/2;
   grid-row: 1/3;
-  font-size: 24px;
+  font-size: 1.5em;
   width: min-content;
   text-align: center;
   align-items: center;
@@ -701,7 +730,7 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
   grid-row: 1/2;
   font-family: "DM Sans", sans-serif;
   font-weight: 700;
-  font-size: 22px;
+  font-size: 1.375em;
   color: #191919;
 }
 .why-choose-us .container .section-title li a h3:hover {
@@ -712,13 +741,12 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
   grid-row: 2/3;
   color: RGBA(25, 25, 25, 0.7);
   font-weight: 500;
-  font-size: 16px;
+  font-size: 1em;
 }
 .why-choose-us .container img {
-  width: 100%;
-  max-width: 645px;
-  min-height: 505px;
-  height: 100%;
+  max-width: 55%;
+  max-height: 31.563rem;
+  margin-top: 88px;
 }
 
 .project-and-case .container .center-content {
@@ -773,4 +801,298 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 }
 .project-and-case .container .project-and-cases .project:hover .readmore {
   text-decoration: underline solid black;
+}
+
+.meet-our-team {
+  background-color: RGBA(240, 208, 130, 0.93);
+}
+.meet-our-team .container {
+  display: grid;
+  justify-content: center;
+}
+.meet-our-team .container .section-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.meet-our-team .container .section-box a {
+  margin-top: 60px;
+  border: 1px solid #191919;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.meet-our-team .container .parent {
+  display: block;
+}
+.meet-our-team .container .parent .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+}
+.meet-our-team .container .parent .circles .circle {
+  border: 1px solid #C3AB70;
+  height: 14px;
+  width: 14px;
+  margin-right: 1.5rem;
+  border-radius: 50%;
+  background-color: #C3AB70;
+}
+.meet-our-team .container .parent .circles .c1:hover + .employee .mark {
+  background-color: #191919;
+}
+.meet-our-team .container .parent .employees {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+.meet-our-team .container .parent .employees .employee {
+  display: grid;
+  align-items: start;
+  object-fit: cover;
+}
+.meet-our-team .container .parent .employees .employee img {
+  max-width: 308px;
+  max-height: 420px;
+  object-fit: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.meet-our-team .container .parent .employees .employee h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #191919;
+  padding-top: 20px;
+}
+.meet-our-team .container .parent .employees .employee p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: RGBA(25, 25, 25, 0.7);
+  letter-spacing: -0.7px;
+}
+.meet-our-team .container .testimonial {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-self: center;
+  background-color: #FFFFFF;
+  width: 100%;
+  box-sizing: content-box;
+  padding: 9% 6%;
+  margin-top: 10%;
+  margin-bottom: 200px;
+  align-items: center;
+}
+.meet-our-team .container .testimonial .section-title {
+  text-align: center;
+  padding-top: 0px;
+}
+.meet-our-team .container .testimonial .reviews {
+  display: flex;
+  justify-content: center;
+  column-gap: 30px;
+}
+.meet-our-team .container .testimonial .reviews .rating-box {
+  display: grid;
+  margin: 20px;
+  row-gap: 20px;
+}
+.meet-our-team .container .testimonial .reviews .rating-box .star-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: #F94D1C;
+}
+.meet-our-team .container .testimonial .reviews .rating-box p {
+  text-align: start;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #191919;
+  width: 82%;
+}
+.meet-our-team .container .testimonial .reviews .rating-box .the-client {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr;
+  grid-template-rows: auto auto;
+  grid-column-gap: 20px;
+  grid-row-gap: 0px;
+}
+.meet-our-team .container .testimonial .reviews .rating-box .the-client img {
+  width: 70px;
+  height: 70px;
+  grid-column: 1/2;
+  grid-row: 1/3;
+  object-fit: cover;
+  border-radius: 100px;
+}
+.meet-our-team .container .testimonial .reviews .rating-box .the-client .name {
+  grid-column: 2/4;
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #191919;
+  text-align: left;
+}
+.meet-our-team .container .testimonial .reviews .rating-box .the-client p {
+  grid-column: 2/4;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #F94D1C;
+  letter-spacing: -1px;
+}
+.meet-our-team .container .testimonial .btn-black {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 5%;
+}
+
+.articles-and-news .container {
+  display: grid;
+}
+.articles-and-news .container .heading-and-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.articles-and-news .container .guide-boxes-flex {
+  display: flex;
+  flex: 1;
+  column-gap: 25px;
+}
+.articles-and-news .container .guide-boxes-flex .guide-box-grid {
+  display: inline-block;
+  align-items: center;
+}
+.articles-and-news .container .guide-boxes-flex .guide-box-grid img {
+  max-width: 420px;
+  width: 100%;
+  max-height: 230px;
+  height: 100%;
+  object-fit: cover;
+}
+.articles-and-news .container .guide-boxes-flex .guide-box-grid .business {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #6A6C71;
+}
+.articles-and-news .container .guide-boxes-flex .guide-box-grid h3 {
+  font-family: "DM Sans", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: #191919;
+  text-align: start;
+  width: 60%;
+  margin-top: 7%;
+}
+.articles-and-news .container .guide-boxes-flex .guide-box-grid p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: RGBA(25, 25, 25, 0.7);
+}
+.articles-and-news .container .circles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.articles-and-news .container .circles .circle {
+  border: 1px solid #d7d4cc;
+  height: 14px;
+  width: 14px;
+  margin-right: 15px;
+  border-radius: 50%;
+  background-color: #d7d4cc;
+}
+.articles-and-news .container .circles .circle.active, .articles-and-news .container .circles .circle:hover {
+  background-color: #191919;
+}
+
+.news-updates {
+  background-color: #F0EFE9;
+  padding: 20px 0;
+  margin-top: 90px;
+  position: relative;
+  z-index: 0;
+}
+.news-updates .section-nine-lines {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 40px;
+}
+.news-updates .container,
+.news-updates .section-title {
+  text-align: center;
+}
+.news-updates .subscribe-box {
+  margin-top: 40px;
+  display: inline-block;
+}
+.news-updates .subscribe-box .btn {
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #191919;
+  background-color: #F9D783;
+  border: 1px solid #F9D783;
+  border-radius: 30px;
+  padding: 0.9rem 1.5rem;
+  margin-top: none;
+  transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+.news-updates .subscribe-box .btn i {
+  margin-left: 5px;
+  font-size: 0.85em;
+}
+.news-updates .subscribe-box .btn:hover {
+  background-color: #191919;
+  border-color: #191919;
+  color: rgb(248, 245, 245);
+}
+.news-updates .subscribe-box .mail-window {
+  background-color: white;
+  border-radius: 25px;
+  padding: 15px;
+}
+.news-updates .subscribe-box .mail-window input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+.news-updates .subscribe-box button {
+  margin-top: 30px;
+}
+@media (min-width: 1200px) {
+  .news-updates .container,
+  .news-updates .section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .news-updates .container .subscribe-box,
+  .news-updates .section-title .subscribe-box {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+  }
+  .news-updates .container .subscribe-box .mail-window,
+  .news-updates .section-title .subscribe-box .mail-window {
+    margin-right: 25px;
+    padding: 15px 80px 15px 20px;
+  }
+  .news-updates .container .subscribe-box button,
+  .news-updates .section-title .subscribe-box button {
+    margin-top: 0;
+  }
+}
+
+footer {
+  background-color: #0E1021;
+}
+footer .container .child-info {
+  display: flex;
 }
