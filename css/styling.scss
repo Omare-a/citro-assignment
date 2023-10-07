@@ -1329,17 +1329,200 @@ header{
     }
 }
 
+
 footer{
     background-color: #0E1021;
+    a{
+        text-decoration: none;
+        p:hover{
+            text-decoration: underline;
+        }
+    }
+    p{
+        color:RGBA(255,255,255,0.7);
+        font-size: 16px;
+        font-weight: 400;
+    }
     .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        
+
         .child-info{
-            display: flex;
+            display: grid;
+            grid-template-columns:2fr repeat(4, 1fr);
+            column-gap: 70px;
+            text-align: start;
+            align-items: center;
+            margin-top: 7%;
+            .grid-info-citro{
+                display: grid;
+                grid-template-rows:minmax(70px,1fr)175px;
+                row-gap: 10px;
+                p{
+                    max-width: 310px;
+                }
+                
+            }
+           
+            .grid-info{
+                display: grid;
+                grid-template-rows: minmax(70px, 1fr) repeat(4,40px) ;
+                h4{
+                    color: #FFFFFF;
+                    font-family:'DM Sans', sans-serif;
+                }
+            }
+        
+        }
+    }
+    .parent-social{
+        border-top: 1px solid RGBA(255,255,255,0.2 );
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        .child-social{
+            display: grid;
+            grid-template-columns: 1fr auto;
+            margin-top: 20px;
+            // border: solid;
+
+            .socials{
+                display: flex;
+                a{
+                    margin-left: 1rem;
+                    color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+}
+
+.articles{
+    .container{
+        .content{
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            padding-bottom: 90px ;
+            h1{
+                font-size: 56px;
+                margin-top: -20px;
+            }
+            .home-news-p{
+                a{
+                    display: inline-block;
+                    color: #191919;
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    margin-left: -30px;
+
+                    &.active::after,
+                    &:hover::after{
+                        content:'';
+                        position: absolute;
+                        font-weight: 500;
+                        height: 2px;
+                        width: 15px;
+                        background-color: #191919;
+                        
+                        left: 50%;
+                        bottom: 15px;
+                        transform: translate(calc(50% - 15px));
+
+                    }
+                }    
+            }
         }
     }
 }
 
+.page-two-articles{
+    .container{
+        .section-title{
+            padding-bottom:2rem;
+        }
+        .guide-boxes-flex{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            row-gap: 110px;
+        }
+        ul{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+            // position: relative;
+            
+            li{
+                list-style: none;
+                line-height: 50px;
+                margin: 0 5px;
+                border: 1px solid #EAE9F2;
+                border-radius: 20%;
+                .active{
+                    color: #FFFFFF;
+                    background-color: #191919;
+                    border-radius: 20%;
+                }
+                a{
+                    display: flex;
+                    text-align: center;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    color: #19191B;
+                    font-family:'DM Sans', sans-serif;
+                    font-size: 18px;
+                    font-weight: 500;
+                    width: 30px;
+                    height: 30px;
+                    i{
+                        font-size: 11px;
+                        font-weight: 800;
+                        color: #111111;
+                        
+                    }
+
+                    &:hover{
+                        color: #FFFFFF;
+                        background-color: #191919;
+                        border-radius: 20%;
+                        i{
+                            color: #FFFFFF;
+                        }
+                        
+                        
+                    }
+                    
+                }
+                
+
+                  
 
 
+                .pagenumber{
+                    // border: solid;
+                    // width: 50px;
+                    // height: 50px;
+                    // line-height: 50px;
+                    // text-align: center;
+
+                    
+
+                }
+            }
+        }
+    }
+    
+}
 
 
 
