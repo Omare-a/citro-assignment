@@ -783,22 +783,22 @@ header{
 // ej klar innan 992px
 .why-choose-us{
     // border: solid;
-    // position: relative;
+    position: relative;
     z-index: 0;
 
     .blank{
         background-color: #F0EFE9;
-        width:1057px ;
+        width:1157px ;
         max-width: 100%;
         height: 425px;
-        position: relative;
+        position: absolute;
         z-index: -1;
         bottom: 800px;
         left: 39%;
         display: none;
         @media(min-width:1200px){
-            bottom: 525px;
-            left: 43%;
+            top: 250px;
+            left: 41%;
         }
         @media(min-width: 992px){
             display: flex;
@@ -1015,9 +1015,6 @@ header{
                     background-color: #191919;
                   
                 }
-                .c2{}
-                .c3{}
-                .c4{}
                 
             }
             

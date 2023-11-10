@@ -657,14 +657,15 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 }
 
 .why-choose-us {
+  position: relative;
   z-index: 0;
 }
 .why-choose-us .blank {
   background-color: #F0EFE9;
-  width: 1057px;
+  width: 1157px;
   max-width: 100%;
   height: 425px;
-  position: relative;
+  position: absolute;
   z-index: -1;
   bottom: 800px;
   left: 39%;
@@ -672,8 +673,8 @@ header .container .meny .bottom-meny div a.active::after, header .container .men
 }
 @media (min-width: 1200px) {
   .why-choose-us .blank {
-    bottom: 525px;
-    left: 43%;
+    top: 250px;
+    left: 41%;
   }
 }
 @media (min-width: 992px) {
